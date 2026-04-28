@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# 🍽️ Eat-n-Split - A Bill Splitting App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React project developed to track and manage the  total spent by the group by tracking who paid and who has borrowed money
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+-Add friends: into the group with custom avator,currently using  "https://i.pravatar.cc/48" for random images genaration.
 
-### `npm start`
+-Split the bill: with the  friends ,keeeping track of whos paid and whos borrowed money and yet to pay.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-Track Balance:keep track of the members whos paid and who yet to pay the user on the bill spent by the user in place of the members.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-Color-code:useds a simple ui with hybrid flex and grid layout  cards.
 
-### `npm test`
+-Responsiveness- works on mobile and desktop window.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##  Quick Start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
+bash
+# Install dependencies
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Start development server
+npm start
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Usage
+1. Add a Friend: Click "Add Friend" button, enter name and image URL
+2. Select Friend: Click "Select" button next to a friend
+3. Split Bill: Enter total bill amount and your portion
+4. **Done**: Friend's balance updates automatically
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+##  Documentation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### For Learning
+(1) Used useState hooks and  obtained a  more clear view on the hooks(syyntax and advance uage in props drilling).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+(2) Toggle effect from "show and setShow "
+At default the add  freind card is hidden and on click the stae is reverted to show the  card.
 
-## Learn More
+(3)Add  the freind on the form submit in to the existing array as an element.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+(4) Selecting each individual for the share splitting.
 
-### Code Splitting
+(5)
+const [bill, setBill] = useState("");
+const [paidByUser, setPaidByUser] = useState("");
+const [whospaying, setWhosPaying] = useState("user");
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+These states are used to calculate the total, paid by the user or friend and the splitting based on borrow or owe action.
 
-### Analyzing the Bundle Size
+(6) Prop drilling :like passing function or state from the on component to other to avoid hydration error.
+-
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **[IMPLEMENTATION_GUIDE.md](IMPLEMENTATION_GUIDE.md)** - How the code works & how to extend it
 
-### Making a Progressive Web App
+### For Development
+- **[CLAUDE.md](CLAUDE.md)** - Project architecture & guidelines
+- **[BUGS_FIXED.md](BUGS_FIXED.md)** - Issues found and fixed
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🎓 React Concepts Applied
 
-### Advanced Configuration
+| Concept | Purpose | Example |
+|---------|---------|---------|
+| **useState** | State management | Friends list, selected friend |
+| **Props** | Component communication | Passing handlers and data |
+| **Props Drilling** | Passing props through levels | App → List → Individual items |
+| **Controlled Components** | Form state sync | Name and image inputs |
+| **Conditional Rendering** | Show/hide elements | Forms, balance display |
+| **Array Methods** | Data manipulation | map, filter, find |
+| **Event Handling** | User interactions | Button clicks, form submissions |
+| **Immutable Updates** | State consistency | Using spread operator and map |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**See [CONCEPTS.md](CONCEPTS.md) for detailed explanations.**
 
-### Deployment
+## 🛠️ Available Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+npm start      # Runs the app in development mode
+npm build      # Builds the app for production
+npm test       # Runs the test suite
+npm eject      # Ejects from Create React App (one-way!)
+```
 
-### `npm run build` fails to minify
+## 📝 Code Quality
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Standards Followed
+- ✅ Functional components (React hooks)
+- ✅ Immutable state updates
+- ✅ Controlled form inputs
+- ✅ Proper event handling
+- ✅ Clean code style
+- ✅ Consistent naming conventions
+
+## 🐛 Known Issues Fixed
+
+See [BUGS_FIXED.md](BUGS_FIXED.md) for details on:
+- ✅ UUID generation fix
+- ✅ Strict equality (`===` instead of `==`)
+- ✅ Form reset after submission
+- ✅ Removed debug console logs
+
+#
+
+Made with ❤️ while learning React-concepts.
+
