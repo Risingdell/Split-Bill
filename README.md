@@ -58,9 +58,7 @@ These states are used to calculate the total, paid by the user or friend and the
 
 - **[IMPLEMENTATION_GUIDE.md](IMPLEMENTATION_GUIDE.md)** - How the code works & how to extend it
 
-### For Development
-- **[CLAUDE.md](CLAUDE.md)** - Project architecture & guidelines
-- **[BUGS_FIXED.md](BUGS_FIXED.md)** - Issues found and fixed
+
 
 ## 🎓 React Concepts Applied
 
@@ -96,15 +94,7 @@ npm eject      # Ejects from Create React App (one-way!)
 - ✅ Clean code style
 - ✅ Consistent naming conventions
 
-## 🐛 Known Issues Fixed
 
-See [BUGS_FIXED.md](BUGS_FIXED.md) for details on:
-- ✅ UUID generation fix
-- ✅ Strict equality (`===` instead of `==`)
-- ✅ Form reset after submission
-- ✅ Removed debug console logs
-
-#
 
 Made with ❤️ while learning React-concepts.
 
