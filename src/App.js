@@ -54,7 +54,7 @@ export  default function App(){
          {show && <FormAddFriend onenter={AddFreind} selectedFreind={selected}/>}
          <Button onclick={handleShow}>{show ? "close": "add freind"}</Button>
       </div>
-      {selected && <FormSplitBill selected={selected} updateBalace={updateBalace} />}
+      {selected && <FormSplitBill key ={selected.id} selected={selected} updateBalace={updateBalace} />}
     </div>
 
 
